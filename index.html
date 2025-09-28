@@ -141,7 +141,13 @@
   <div class="column is-three-quarters">
     <div class="content">
       <p style="text-align: justify;">
-        We introduce GeoVLM-R1, a RL framework that enhances geospatial VLM reasoning while remaining flexible, scalable, and easy to extend across diverse EO tasks. Our approach leverages group-wise relative advantages to reduce training variance and improve structured reasoning.  Our RL approach takes guidance from dual-objective reward design: (i) accuracy compliance, ensuring semantic correctness, and (ii) format compliance, enforcing interpretable, structured outputs.  Specifically, we introduce a task-aware accuracy reward mechanism that is designed to select a specific reward for each downstream EO task.  For instance, in grounding-description tasks that require both object detection and textual explanation, simple similarity matching is insufficient; instead, we integrate bounding-box IoU with semantic alignment to jointly reward based on detection and description quality. Analogous task-specific rewards are defined for classification, change detection, captioning, and disaster assessment, ensuring targeted skill acquisition without degrading existing competencies for the EO tasks.      </p>
+  Illustration of the overall proposed training paradigm for GeoVLM-R1. 
+  The model outputs a structured format that comprises an interpretable reasoning trace 
+  <code>&lt;think&gt;...&lt;/think&gt;</code> 
+  and a final prediction 
+  <code>&lt;answer&gt;...&lt;/answer&gt;</code>.
+</p>
+
     </div>
   </div>
 </div>
@@ -1201,6 +1207,7 @@
   
 </body>
 </html>
+
 
 
 
